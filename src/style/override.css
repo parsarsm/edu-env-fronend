@@ -78,9 +78,15 @@ i.icon {
 .ui.secondary.vertical.pointing.menu .active.item {
     border-color: #4caac4;
 }
+
 .ui.header {
     color: rgb(17, 183, 228)
 }
+
 .ui.menu .active.item:hover, .ui.vertical.menu .active.item:hover {
     background-color: unset;
+}
+
+#navButton {
+    background-color: #59b7d6;
 }

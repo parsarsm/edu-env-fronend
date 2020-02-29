@@ -1,5 +1,5 @@
 import React from 'react'
-import {Button, Container, Grid, Header as SHeader, Message, Segment} from 'semantic-ui-react'
+import {Button, Container, Grid, Header as SHeader, Message, Segment, Transition} from 'semantic-ui-react'
 import Header from "../partials/header/Header";
 import Sidebar from "../partials/sidebar/Sidebar";
 
@@ -18,17 +18,22 @@ export default class MobileLayout extends React.Component {
                 <div style={{position: "fixed", bottom: '50px', left: '50px', zIndex: 40000}}>
                     <Button
                         onClick={this.handleShowNav}
-                        circular color='facebook' icon={this.state.showNav ? 'close' : 'arrows alternate'}
+                        circular color='blue'
+                        icon={this.state.showNav ? 'close' : 'arrows alternate'}
+                        id={'navButton'}
                         size={"huge"}/>
                 </div>
 
-                {/*{this.state.showNav ? (*/}
                 <div style={{display: this.state.showNav ? 'unset' : 'none'}}>
-                    <Container fluid style={{marginTop: '2em', width: '100%'}}>
-                        <Sidebar/>
-                    </Container>
+                    <Transition.Group animation={"fade up"} duration={400}>
+                        {this.state.showNav && (
+                            <Container fluid style={{marginTop: '2em', width: '100%'}}>
+                                <Sidebar/>
+                            </Container>
+                        )}
+                    </Transition.Group>
+
                 </div>
-                {/*) : (*/}
                 <div style={{display: !this.state.showNav ? 'unset' : 'none'}}>
                     <Container fluid style={{marginTop: '3em', width: '90%'}}>
                         <Grid>
@@ -39,7 +44,6 @@ export default class MobileLayout extends React.Component {
                     </Container>
                 </div>
 
-                {/*)}*/}
             </>
 
 
