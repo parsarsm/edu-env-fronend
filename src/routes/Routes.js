@@ -4,23 +4,23 @@ import {
     Switch,
     Route,
 } from "react-router-dom";
-import routes from './_routes'
+import {getAllRoutes} from './_routes'
+import Layout from "../components/layout/Layout";
 
 export default class Routes extends React.PureComponent {
     render() {
         return (
             <Router>
-                <Switch>
-                    {
-                        routes.map(
-                            (route, index) => (
-                                <Route path={route.path} key={index}>
-                                    {route.component}
-                                </Route>
+                <Layout>
+                    <Switch>
+                        {
+                            getAllRoutes().map(
+                                (route) =>
+                                    <Route path={route.path} component={route.component}/>
                             )
-                        )
-                    }
-                </Switch>
+                        }
+                    </Switch>
+                </Layout>
             </Router>
         );
     }

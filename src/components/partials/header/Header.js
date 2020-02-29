@@ -1,49 +1,52 @@
 import React from 'react'
-import { Dropdown, Icon, Menu} from 'semantic-ui-react'
+import {Container, Dropdown, Icon, Menu} from 'semantic-ui-react'
 
+const trigger = (
+    <span>
+    <Icon name='user' /> سلام محمد
+  </span>
+)
+const options = [
+    {
+        key: 'user',
+        text: (
+            <span>
+        به عنوان <strong>محمد رستمی</strong> وارد شدید
+      </span>
+        ),
+        disabled: true,
+    },
+    { key: 'logout', text: 'خروج' },
+    { key: 'contactUs', text: 'تماس با ما' },
+]
 
 export default class Header extends React.Component {
+    state = {activeItem: 'home'}
+
+    handleItemClick = (e, {name}) => this.setState({activeItem: name})
 
     render() {
+        const { activeItem } = this.state
+
         return (
-            <div>
-                <Menu fixed='top' color={"black"} inverted>
-                    <Dropdown item icon='wrench' simple>
-                        <Dropdown.Menu>
-                            <Dropdown.Item>
-                                <Icon name='dropdown' />
-                                <span className='text'>New</span>
+            <>
+                    <Menu inverted attached>
+                        <Menu.Item
+                            // name='home'
+                            content={<Dropdown trigger={trigger} options={options} />}
+                            // active={activeItem === 'home'}
+                            onClick={this.handleItemClick}
+                        />
+                        <Menu.Item
+                            position={"right"}
+                            name='سامانه آموزش شریف‬'
 
-                                <Dropdown.Menu>
-                                    <Dropdown.Item>Document</Dropdown.Item>
-                                    <Dropdown.Item>Image</Dropdown.Item>
-                                </Dropdown.Menu>
-                            </Dropdown.Item>
-                            <Dropdown.Item>Open</Dropdown.Item>
-                            <Dropdown.Item>Save...</Dropdown.Item>
-                            <Dropdown.Item>Edit Permissions</Dropdown.Item>
-                            <Dropdown.Divider />
-                            <Dropdown.Header>Export</Dropdown.Header>
-                            <Dropdown.Item>Share</Dropdown.Item>
-                        </Dropdown.Menu>
-                    </Dropdown>
-
-                    <Menu.Menu position='right'>
-                        <div className='ui right aligned category search item'>
-                            <div className='ui transparent icon input'>
-                                <input
-                                    className='prompt'
-                                    type='text'
-                                    placeholder='Search animals...'
-                                />
-                                <i className='search link icon' />
-                            </div>
-                            <div className='results' />
-                        </div>
-                    </Menu.Menu>
-                </Menu>
-            </div>
-
+                            // content={'آخرین ورود : ‪۱۳۹۸/۱۲/۹ ۱۹:۸‬'}
+                            // active={activeItem === 'friends'}
+                            onClick={this.handleItemClick}
+                        />
+                    </Menu>
+            </>
 
 
         )

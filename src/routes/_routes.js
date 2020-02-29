@@ -1,8 +1,7 @@
 // declare Menu Items Here
 import Info from "../components/pages/info/Info";
 
-let routes;
-export default routes = [
+let routes = [
     { // An Item
         title: 'امور ثبت نام و ترمیم',
         path: '/registration',
@@ -157,3 +156,17 @@ export default routes = [
             ]
     }
 ]
+export const getAllRoutes = () => {
+    let r = []
+    routes.forEach(item => {
+            item.subItems.forEach(
+                subItem => {
+                    r = r.concat({path: subItem.path, component: subItem.component})
+                }
+            )
+        }
+    )
+    return r
+}
+
+export default routes;
