@@ -94,3 +94,15 @@ h2.ui.header {
 .ui.accordion.menu .item .title > .dropdown.icon {
     margin:  0 0 0 1em;
 }
+
+ul.ui.list {
+    margin-left: unset;
+    margin-right: 1.25rem;;
+}
+
+ul.ui.list li:before {
+    margin-right: -1.25rem;
+}
+.white-dot:before {
+    filter: invert();
+}

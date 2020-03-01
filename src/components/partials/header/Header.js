@@ -1,5 +1,5 @@
 import React from 'react'
-import {Container, Dropdown, Icon, Menu, Message} from 'semantic-ui-react'
+import {Container, Dropdown, Icon, List, Menu, Message} from 'semantic-ui-react'
 
 const trigger = (
     <span>
@@ -41,13 +41,21 @@ export default class Header extends React.Component {
             <>
                 {visible ? (<Message
                     color={"black"}
-                    attached
-                    // header='Welcome to our site!'
+                    attached={'top'}
                     onDismiss={this.handleDismiss}
-                    // content='Fill out the form below to sign-up for a new account'
                 >
-                    <Message.Header>New Site Features</Message.Header>
-                    <Message.List items={items} />
+                    <Message.Header>اطلاعیه های ضروری</Message.Header>
+                    <List as='ul' inverted>
+                        <List.Item as='li' className={'white-dot'}>
+                            <a href='#'>وب سایت معاونت آموزشی و تحصیلات تکمیلی</a>
+                        </List.Item>
+                        <List.Item as='li' className={'white-dot'}>
+                            <a href='#'>فرمها؛ آئین نامه ها و مقررات آموزشی جدید</a>
+                        </List.Item>
+                        <List.Item as='li' className={'white-dot'}>
+                            <a href='#'>راهنمای ثبت نام نیمسال جاری</a>
+                        </List.Item>
+                    </List>
                 </Message>) : ''}
 
                 <Menu inverted attached>

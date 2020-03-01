@@ -1,5 +1,5 @@
 import React from 'react'
-import {Header as SHeader, Icon, Segment, Table} from 'semantic-ui-react'
+import {Header as SHeader, Icon, List, Segment, Table} from 'semantic-ui-react'
 import Message from "../../elements/Message/Message";
 
 export default class Info extends React.PureComponent {
@@ -26,22 +26,18 @@ export default class Info extends React.PureComponent {
                 <SHeader as='h5' attached='top' inverted>
                     اعلامیه ها
                 </SHeader>
-                <Segment attached={"bottom"}><Message>
-                    <a href="#">وب سایت معاونت آموزشی و تحصیلات تکمیلی</a>
-                </Message>
-                    <Message>
-                        <a href="#">فرمها ؛ آئین نامه ها و مقررات آموزشی جدید</a>
-
-                    </Message>
-                    <Message>
-                        <a href="#">راهنمای ثبت نام نیمسال جاری</a>
-                    </Message>
+                <Segment attached={"bottom"}>
+                    <List>
+                        <List.Item as='a'>وب سایت معاونت آموزشی و تحصیلات تکمیلی</List.Item>
+                        <List.Item as='a'>فرمها؛ آئین نامه ها و مقررات آموزشی جدید</List.Item>
+                        <List.Item as='a'>راهنمای ثبت نام نیمسال جاری</List.Item>
+                    </List>
                 </Segment>
                 <SHeader as='h5' attached={"top"} inverted>
                     راهنما
                 </SHeader>
-                <Segment attached={"bottom"}>
-                    <div style={{overflowX: "scroll"}}>
+                <Segment attached>
+                    <div style={{overflowX: "scroll"}} >
                         <Table celled unstackable>
                             <Table.Header>
                                 <Table.Row>
@@ -83,64 +79,6 @@ export default class Info extends React.PureComponent {
                     </div>
 
                 </Segment>
-                <Message warning attached='bottom'>
-                    <Icon name='warning'/>
-                    You've reached the end of this content segment!
-                </Message>
-
-                {/*<Segment stacked>*/}
-
-                {/*    <Message>*/}
-                {/*        <a href="#">وب سایت معاونت آموزشی و تحصیلات تکمیلی</a>*/}
-                {/*    </Message>*/}
-                {/*    <Message>*/}
-                {/*        <a href="#">فرمها ؛ آئین نامه ها و مقررات آموزشی جدید</a>*/}
-
-                {/*    </Message>*/}
-                {/*    <Message>*/}
-                {/*        <a href="#">راهنمای ثبت نام نیمسال جاری</a>*/}
-                {/*    </Message>*/}
-                {/*    <div style={{overflowX: "scroll"}}>*/}
-                {/*        <Table celled unstackable>*/}
-                {/*            <Table.Header>*/}
-                {/*                <Table.Row>*/}
-                {/*                    <Table.HeaderCell>مورد</Table.HeaderCell>*/}
-                {/*                    <Table.HeaderCell>وضعیت</Table.HeaderCell>*/}
-                {/*                    <Table.HeaderCell>توضیحات</Table.HeaderCell>*/}
-                {/*                </Table.Row>*/}
-                {/*            </Table.Header>*/}
-                {/*            <Table.Body>*/}
-                {/*                <Table.Row positive>*/}
-                {/*                    <Table.Cell>*/}
-                {/*                        استاد راهنما*/}
-                {/*                    </Table.Cell>*/}
-                {/*                    <Table.Cell>*/}
-                {/*                        تعیین شده*/}
-                {/*                    </Table.Cell>*/}
-                {/*                    <Table.Cell>*/}
-                {/*                        استاد راهنمای شما خانم/آقای جعفر حبیبی است.*/}
-                {/*                    </Table.Cell>*/}
-
-                {/*                </Table.Row>*/}
-                {/*                <Table.Row positive>*/}
-                {/*                    <Table.Cell>مجوز ثبت نام توسط استاد راهنما </Table.Cell>*/}
-                {/*                    <Table.Cell>*/}
-                {/*                        صادر شده*/}
-                {/*                    </Table.Cell>*/}
-                {/*                    <Table.Cell>مجوز ثبت نام شما در نیمسال 13982 توسط استاد راهنما صادر شده است.*/}
-                {/*                    </Table.Cell>*/}
-                {/*                </Table.Row>*/}
-                {/*                <Table.Row negative>*/}
-                {/*                    <Table.Cell>ساعت ثبت نام </Table.Cell>*/}
-                {/*                    <Table.Cell>تعیین نشده </Table.Cell>*/}
-                {/*                    <Table.Cell>*/}
-                {/*                        زمان ثبت نام برای شما تعیین نشده است.به آموزش دانشکده مراجعه کنید.*/}
-                {/*                    </Table.Cell>*/}
-                {/*                </Table.Row>*/}
-                {/*            </Table.Body>*/}
-                {/*        </Table>*/}
-                {/*    </div>*/}
-                {/*</Segment>*/}
             </>
         )
     }
