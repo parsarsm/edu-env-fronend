@@ -79,7 +79,7 @@ i.icon {
     border-color: #4caac4;
 }
 
-.ui.header {
+h2.ui.header {
     color: rgb(17, 183, 228)
 }
 
@@ -89,4 +89,8 @@ i.icon {
 
 #navButton {
     background-color: #59b7d6;
+}
+
+.ui.accordion.menu .item .title > .dropdown.icon {
+    margin:  0 0 0 1em;
 }

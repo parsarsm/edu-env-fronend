@@ -11,6 +11,7 @@ let routes = [
                     title: 'اطلاعیه و راهنمای ثبت نام و ترمیم',
                     path: '/info',
                     component: Info,
+                    icon: 'info'
                 },
                 {
                     title: 'لیست دروس ارائه شده دانشکده ها در ترم جاری',

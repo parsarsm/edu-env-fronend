@@ -36,11 +36,7 @@ export default class MobileLayout extends React.Component {
                 </div>
                 <div style={{display: !this.state.showNav ? 'unset' : 'none'}}>
                     <Container fluid style={{marginTop: '3em', width: '90%'}}>
-                        <Grid>
-                            <Grid.Column>
                                 {this.props.children}
-                            </Grid.Column>
-                        </Grid>
                     </Container>
                 </div>
 

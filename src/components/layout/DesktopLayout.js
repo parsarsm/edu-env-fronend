@@ -8,17 +8,22 @@ export default class DesktopLayout extends React.Component {
     render() {
         return (
             <>
-                <Container fluid style={{marginTop: '7em', width: '90%'}}>
-                    <Grid>
-                        <Grid.Column width={4}>
-                            <Sidebar/>
+                <div
+                    // style={{maxWidth: '1300px'}}
+                    // todo
+                >
+                    <Container fluid style={{marginTop: '7em', width: '90%'}}>
+                        <Grid>
+                            <Grid.Column width={4}>
+                                <Sidebar/>
 
-                        </Grid.Column>
-                        <Grid.Column width={12}>
-                            {this.props.children}
-                        </Grid.Column>
-                    </Grid>
-                </Container>
+                            </Grid.Column>
+                            <Grid.Column width={12}>
+                                {this.props.children}
+                            </Grid.Column>
+                        </Grid>
+                    </Container>
+                </div>
             </>
 
         )
