@@ -1,5 +1,7 @@
 // declare Menu Items Here
 import Info from "../components/pages/info/Info";
+import ProfileForm from "../components/pages/form/Form";
+import CourseList from "../components/pages/courseList/CourseList";
 
 let routes = [
     { // An Item
@@ -16,7 +18,7 @@ let routes = [
                 {
                     title: 'لیست دروس ارائه شده دانشکده ها در ترم جاری',
                     path: '/courseList',
-                    component: '',
+                    component: CourseList,
                 },
                 {
                     title: 'فرم مشاوره انتخاب واحد',

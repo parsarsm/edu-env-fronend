@@ -12,7 +12,7 @@ export default class DesktopLayout extends React.Component {
                     // style={{maxWidth: '1300px'}}
                     // todo
                 >
-                    <Container fluid style={{marginTop: '7em', width: '90%'}}>
+                    <Container fluid style={{marginTop: '5em', width: '90%'}}>
                         <Grid>
                             <Grid.Column width={4}>
                                 <Sidebar/>

@@ -29,8 +29,8 @@
 
 
 * {
-    direction: rtl;
-    text-align: right;
+    direction: rtl !important;
+    text-align: right !important;
 }
 
 .ui.menu {
@@ -92,7 +92,7 @@ h2.ui.header {
 }
 
 .ui.accordion.menu .item .title > .dropdown.icon {
-    margin:  0 0 0 1em;
+    margin: 0 0 0 1em;
 }
 
 ul.ui.list {
@@ -103,6 +103,29 @@ ul.ui.list {
 ul.ui.list li:before {
     margin-right: -1.25rem;
 }
+
 .white-dot:before {
     filter: invert();
+}
+
+.ui.selection.dropdown > .delete.icon,
+.ui.selection.dropdown > .dropdown.icon,
+.ui.selection.dropdown > .search.icon {
+    right: unset;
+    left: 1em;
+}
+
+.ui.icon.input > i.icon {
+    right: unset;
+    left: 0;
+}
+
+.ui.selection.dropdown{
+    padding-left: 2.1em;
+    padding-right: 1em;
+}
+
+.ui.icon.input>input {
+    padding-right: 1em !important;
+
 }

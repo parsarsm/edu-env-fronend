@@ -95,7 +95,7 @@ export default class Sidebar extends Component {
                     // href='#card-example-link-card'
                     // header='زمان کنونی'
                       meta='زمان کنونی'
-                      description='سه شنبه ۲۲ بهمن ۱۳۹۸ ۱۰:۴۶:۳۵'
+                      description='سه شنبه ۲۲ بهمن ۱۳۹۸ '
                 />
             </Container>
         )

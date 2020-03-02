@@ -1,5 +1,5 @@
 import React from 'react'
-import {Header as SHeader, Icon, List, Segment, Table} from 'semantic-ui-react'
+import {Dropdown, Header as SHeader, Icon, Input, List, Segment, Table} from 'semantic-ui-react'
 import Message from "../../elements/Message/Message";
 
 export default class Info extends React.PureComponent {
