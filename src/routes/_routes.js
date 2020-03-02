@@ -1,7 +1,7 @@
 // declare Menu Items Here
 import Info from "../components/pages/info/Info";
-import ProfileForm from "../components/pages/form/Form";
 import CourseList from "../components/pages/courseList/CourseList";
+import UserInfo from "../components/pages/userInfo/UserInfo";
 
 let routes = [
     { // An Item
@@ -78,89 +78,25 @@ let routes = [
             ]
     },
     { // An Item
-        title: 'خدمات آموزشی',
-        path: 'education',
+        title: 'امور کارنامه',
+        path: 'grades',
         subItems:
             [
                 { // A SubItem
-                    title: 'ثبت اطلاعات بانکی دانشجو',
-                    path: 'StudentBankInfo',
-                    component: '',
+                    title: 'وضعیت تحصیلی و ریزنمرات دانشجو',
+                    path: 'StudentInfo',
+                    component: UserInfo,
+                    icon: 'graduation cap'
                 },
                 {
-                    title: 'تطبیق دروس دانشجو با چارت',
-                    path: 'courseMatching',
+                    title: 'لیست نمرات موقت و ثبت اعتراض',
+                    path: 'aaaaaaaaaaaa',
                     component: '',
+                    icon: 'graduation cap'
                 },
-                {
-                    title: 'صدور فرم احراز',
-                    path: 'consult',
-                    component: '',
-                },
-                {
-                    title: 'کارتابل درخواست',
-                    path: 'payment',
-                    component: '',
-                },
-                {
-                    title: 'فرم ثبت نام دانشجو',
-                    path: 'consult',
-                    component: '',
-                },
-                {
-                    title: 'لیست امتحانات پایانترم',
-                    path: 'payment',
-                    component: '',
-                },
-                {
-                    title: 'برنامه هفتگی دانشجو',
-                    path: 'consult',
-                    component: '',
-                },
+
             ]
     },
-    { // An Item
-        title: 'خدمات آموزشی',
-        path: 'education',
-        subItems:
-            [
-                { // A SubItem
-                    title: 'ثبت اطلاعات بانکی دانشجو',
-                    path: 'StudentBankInfo',
-                    component: '',
-                },
-                {
-                    title: 'تطبیق دروس دانشجو با چارت',
-                    path: 'courseMatching',
-                    component: '',
-                },
-                {
-                    title: 'صدور فرم احراز',
-                    path: 'consult',
-                    component: '',
-                },
-                {
-                    title: 'کارتابل درخواست',
-                    path: 'payment',
-                    component: '',
-                },
-                {
-                    title: 'فرم ثبت نام دانشجو',
-                    path: 'consult',
-                    component: '',
-                },
-                {
-                    title: 'لیست امتحانات پایانترم',
-                    path: 'payment',
-                    component: '',
-                },
-                {
-                    title: 'برنامه هفتگی دانشجو',
-                    path: 'consult',
-                    component: '',
-                },
-            ]
-    }
 ]
 export const getAllRoutes = () => {
     let r = []
