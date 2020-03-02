@@ -127,5 +127,8 @@ ul.ui.list li:before {
 
 .ui.icon.input>input {
     padding-right: 1em !important;
+}
 
+.ui.sortable.table thead th:after {
+    margin: 0 .5em 0 0;
 }

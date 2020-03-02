@@ -23,10 +23,10 @@ const sort = [
 ]
 
 const tableData = [
-    {name: 'John', age: 15, gender: 'Male'},
-    {name: 'Amber', age: 40, gender: 'Female'},
-    {name: 'Leslie', age: 25, gender: 'Other'},
-    {name: 'Ben', age: 70, gender: 'Male'},
+    {name: 'محمد رستمی', age: 15, gender: 'مرد'},
+    {name: 'علی علیپور', age: 40, gender: 'مرد'},
+    {name: 'رضا علیزاده', age: 25, gender: 'زن'},
+    {name: 'بابک باکان', age: 70, gender: 'زن'},
 ]
 
 
@@ -206,26 +206,26 @@ export default class CourseList extends React.Component {
                 </SHeader>
                 <Segment attached={"bottom"}>
                     <div style={{overflowX: "scroll"}}>
-                        <Table sortable celled fixed>
+                        <Table sortable celled fixed unstackable>
                             <Table.Header>
                                 <Table.Row>
                                     <Table.HeaderCell
                                         sorted={column === 'name' ? direction : null}
                                         onClick={this.handleSort('name')}
                                     >
-                                        Name
+                                        نام
                                     </Table.HeaderCell>
                                     <Table.HeaderCell
                                         sorted={column === 'age' ? direction : null}
                                         onClick={this.handleSort('age')}
                                     >
-                                        Age
+                                        سن
                                     </Table.HeaderCell>
                                     <Table.HeaderCell
                                         sorted={column === 'gender' ? direction : null}
                                         onClick={this.handleSort('gender')}
                                     >
-                                        Gender
+                                        جنسیت
                                     </Table.HeaderCell>
                                 </Table.Row>
                             </Table.Header>
