@@ -13,22 +13,25 @@ let routes = [
                     title: 'اطلاعیه و راهنمای ثبت نام و ترمیم',
                     path: '/info',
                     component: Info,
-                    icon: 'info'
+                    icon: 'info circle'
                 },
                 {
                     title: 'لیست دروس ارائه شده دانشکده ها در ترم جاری',
                     path: '/courseList',
                     component: CourseList,
+                    icon: 'th list'
                 },
                 {
                     title: 'فرم مشاوره انتخاب واحد',
                     path: '/consult',
                     component: '',
+                    icon: 'edit'
                 },
                 {
                     title: 'پرداخت اینترنتی دانشجویان',
                     path: '/payment',
                     component: '',
+                    icon: 'payment'
                 }
             ]
     },
