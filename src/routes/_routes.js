@@ -2,6 +2,7 @@
 import Info from "../components/pages/info/Info";
 import CourseList from "../components/pages/courseList/CourseList";
 import UserInfo from "../components/pages/userInfo/UserInfo";
+import ConsultForm from "../components/pages/consultForm/ConsultForm";
 
 let routes = [
     { // An Item
@@ -23,8 +24,8 @@ let routes = [
                 },
                 {
                     title: 'فرم مشاوره انتخاب واحد',
-                    path: '/consult',
-                    component: '',
+                    path: '/consultForm',
+                    component: ConsultForm,
                     icon: 'edit'
                 },
                 {
@@ -62,7 +63,7 @@ let routes = [
                 },
                 {
                     title: 'فرم ثبت نام دانشجو',
-                    path: '/consult',
+                    path: '/consuldsaftForm',
                     component: '',
                 },
                 {
@@ -72,7 +73,7 @@ let routes = [
                 },
                 {
                     title: 'برنامه هفتگی دانشجو',
-                    path: 'consult',
+                    path: '/dsafdsconsultForm',
                     component: '',
                 },
             ]

@@ -28,10 +28,11 @@
 }
 
 
-* {
+*:not(.button) {
     direction: rtl !important;
     text-align: right !important;
 }
+
 
 .ui.menu {
     flex-direction: row-reverse;

@@ -11,7 +11,7 @@ import Layout from "../components/layout/Layout";
 export default class Routes extends React.PureComponent {
     render() {
         return (
-            <Router>
+            <Router basename={'/'}>
                 <Layout>
                     <Switch>
                         {
