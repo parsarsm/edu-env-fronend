@@ -3,6 +3,7 @@ import Info from "../components/pages/info/Info";
 import CourseList from "../components/pages/courseList/CourseList";
 import UserInfo from "../components/pages/userInfo/UserInfo";
 import ConsultForm from "../components/pages/consultForm/ConsultForm";
+import BankInfo from "../components/pages/bankInfo/BankInfo";
 
 let routes = [
     { // An Item
@@ -44,7 +45,8 @@ let routes = [
                 { // A SubItem
                     title: 'ثبت اطلاعات بانکی دانشجو',
                     path: '/studentBankInfo',
-                    component: '',
+                    component: BankInfo,
+                    icon: 'money bill alternate outline'
                 },
                 {
                     title: 'تطبیق دروس دانشجو با چارت',

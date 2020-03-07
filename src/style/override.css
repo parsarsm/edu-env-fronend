@@ -133,3 +133,9 @@ ul.ui.list li:before {
 .ui.sortable.table thead th:after {
     margin: 0 .5em 0 0;
 }
+
+
+.ui.form .inline.field>:first-child {
+    margin: 0 0 0 .85714286em;
+}
+

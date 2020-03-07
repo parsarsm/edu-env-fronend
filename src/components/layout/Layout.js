@@ -4,14 +4,15 @@ import Header from "../partials/header/Header";
 import Sidebar from "../partials/sidebar/Sidebar";
 import DesktopLayout from "./DesktopLayout";
 import MobileLayout from "./MobileLayout";
+import Slider from "../partials/slider/Slider";
 
 export default class Layout extends React.Component {
 
     render() {
         return (
             <>
-                <Header/>
-
+                {/*<Slider>*/}
+                    <Header/>
                     <Responsive minWidth={768}>
                         <DesktopLayout>
                             {this.props.children}
@@ -22,6 +23,7 @@ export default class Layout extends React.Component {
                             {this.props.children}
                         </MobileLayout>
                     </Responsive>
+                {/*</Slider>*/}
             </>
 
 
